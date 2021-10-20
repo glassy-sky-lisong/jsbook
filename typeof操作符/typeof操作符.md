@@ -30,3 +30,5 @@
     num2 = 3 
     console.log(`num1 = ${num1}, num2 = ${num2}`)  // num1 = 1, num2 = 3
 ```
+
+&emsp;&emsp;引用值复制的是引用指针，即使属性改变，引用值依然相等。
