@@ -38,3 +38,25 @@ console.log(`num1 = ${num1}, num2 = ${num2}`)  // num1 = 1, num2 = 3
 
 
 separator()
+
+/**
+ * 引用值复制值时，会把引用值复制给新变量，由于引用是指向变量在内存中的地址，所以新变量和被复制的变量都指向同一内存变量，当属性发生变化时，两个引用值变量仍然相等
+ */
+var obj1 = new Object()
+var obj2 = obj1
+
+console.log(obj1, obj2)
+
+obj1.name = 'xiaoli'
+console.log(obj1, obj2)
+
+separator()
+
+var obj3 = new Object({name: 'xiaohong'})
+obj2 = obj1 = obj3
+
+console.log(obj1, obj2, obj3)
+
+obj1.name = 'xiaowang'
+
+console.log(obj1, obj2, obj3)
