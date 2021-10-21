@@ -46,4 +46,17 @@
   var obj3 = { name: 'xiaohong' };
   obj1 = obj3
   console.log(obj1, obj2, obj3) 
+
+```
+
+## 区别3-参数传递
+&emsp;&emsp;按值传参时，将传参复制给函数内的局部变量。按引用传递，将传入的引用值（内存地址）复制给函数内的局部变量。如果引用值（内存地址）的对象改变，则外部引用该引用值的变量也会感知到变化，因为是从同一内存地址拿到内存对象。
+
+&emsp;&emsp;ECMAScript规定了6中原始值非别是Undefined，Null，Symbol，Boolean，String，Number。使用typeof操作符会返回指定原始值变量的相应原始值的字符串。如果变量是引用变量则使用instanceof判断，instanceof会判断其左侧变量是否为右侧的引用类型，是则返回true，否则false。例如
+
+``` js 
+  var str = new String('hello');
+  console.log(str instanceof Object)  // true
+
+
 ```
