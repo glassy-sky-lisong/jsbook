@@ -52,11 +52,10 @@ console.log(obj1, obj2)
 
 separator()
 
-var obj3 = new Object({name: 'xiaohong'})
-obj2 = obj1 = obj3
+var obj3 = {name: 'xiaohong'}
 
-console.log(obj1, obj2, obj3)
+console.log(obj1, obj2, obj3) // xiaoli xiaoli xiaohong
 
-obj1.name = 'xiaowang'
+obj1 = obj3
 
-console.log(obj1, obj2, obj3)
+console.log(obj1, obj2, obj3) // xiaohong(改变) xiaoli(没变) xiaohong

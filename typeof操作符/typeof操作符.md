@@ -18,9 +18,11 @@
     obj.name = "bbb";
 ```
 
-### 区别 2-值赋值行为不同
+### 区别 2-访问行为不同
 
-&emsp;&emsp;当新变量赋值时，等号右边为某一原始值变量，则新变量的是原始值变量的副本。与原始值变量互不影响。
+&emsp;&emsp;保存原始值的变量按值访问的，保存引用值变量是按引用值访问的，引用值保存的是对象的内存地址，js语言不允许直接访问内存对象，只可以操作引用值。
+
+&emsp;&emsp;原始值变量复制的值是原始值的副本。与原始值互不影响。
 
 ``` js
     var num1 = 1
@@ -31,4 +33,17 @@
     console.log(`num1 = ${num1}, num2 = ${num2}`)  // num1 = 1, num2 = 3
 ```
 
-&emsp;&emsp;引用值复制的是引用指针，即使属性改变，引用值依然相等。
+&emsp;&emsp;引用值变量复制的值是引用值，引用值改变，则引用值变量也会改变。
+
+``` js 
+
+  var obj1 = new Object();
+  var obj2 = obj1;
+
+  obj1.name = 'xiaolan'
+  console.log(obj1, obj2)
+
+  var obj3 = { name: 'xiaohong' };
+  obj1 = obj3
+  console.log(obj1, obj2, obj3) 
+```
