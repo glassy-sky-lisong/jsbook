@@ -9,13 +9,11 @@ function foo() {
 function bar() {
     // bar 函数作用域
   var value = 2;
-  var obj = {
-      value: 11
-  }
+
 
 //   谁调用了bar函数
   console.log(this)
-  foo.bind(obj)();
+  foo()
 }
 
 bar();
