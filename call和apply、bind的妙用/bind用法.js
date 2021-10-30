@@ -18,8 +18,8 @@ var secondFunc = cook.bind(obj)
 console.log('before', obj)
 
 
-newFunc()
-secondFunc(1)
+// newFunc()
+// secondFunc(1)
 
 var newFuncObj = new newFunc()
 
